@@ -65,7 +65,7 @@ const textNodes = [
   },
   {
     id: 3,
-    text: 'As you enter through the hallway, the ambient noises of the wind seem to come to a halt. You become weary, fear conquering your mind then suddenly – Woooosh. A distinct ghost like animal came out of the cracks on the floor. It had brownish red colored fur on its body, a line of brown fur crawling from underneath each eye almost as if it was crying, and a tail with a black and orange stripe pattern. The spirit spoke. \“Hellooooo, my name is Spex! The wanderer of the temple! You seem lost… I can help you find a way out!\”',
+    text: 'As you enter through the hallway, the ambient noises of the wind seem to come to a halt. You become weary, fear conquering your mind then suddenly – Woooosh. A distinct ghost like animal came out of the cracks on the floor. It had brownish red colored fur on its body, a line of brown fur crawling from underneath each eye almost as if it was crying, and a tail with a black and orange stripe pattern. The spirit spoke. \“Hellooooo, my name is Authgor! The wanderer of the temple! You seem lost… I can help you find a way out!\”',
     options: [
       
 ]
