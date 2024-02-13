@@ -50,6 +50,7 @@ const textNodes = [
       }
     ]
   },
+  //story
   {
     id: 2,
     text: 'You head inside and spot a big statue of some sort of animal that resembles that of a fluffy creature. A quick shine reeled your attention and you saw a gold plate which stated, “Find the spirit and a path will be unleashed.” At that moment, the entrance behind you caves in leaving you with two stone hallways on both your left and right.',
@@ -66,6 +67,7 @@ const textNodes = [
       }
     ]
   },
+  //story
   {
     id: 3,
     text: 'As you enter through the hallway, the ambient noises of the wind seem to come to a halt. You become weary, fear conquering your mind then suddenly – Woooosh. A distinct ghost like animal came out of the cracks on the floor. It had brownish red colored fur on its body, a line of brown fur crawling from underneath each eye almost as if it was crying, and a tail with a black and orange stripe pattern. The spirit spoke. \“Hellooooo, my name is Authgor! The wanderer of the temple! You seem lost… I can help you find a way out!\”',
@@ -82,9 +84,37 @@ const textNodes = [
       }
     ]
   },
+  //death
   {
     id: 4,
     text: 'You die to bite caused by a mysterious entity',
+    options: [
+      {
+        //restarts game
+        text: 'Restart?',
+        nextText: -1
+      }
+    ]
+  },
+  //story
+  {
+    id: 5,
+    text: '\“Yay!! Come on, follow me!\” You follow the spirit down the long, still silent, ominous hallway until you reach a lever huddled right next to a enormous pair of doors. \“You have to pull this lever at a certain speed – although I forgot whether it was fast or slow…\” ',
+    options: [
+      {
+        text: 'Pull the lever fast?',
+        nextText: 7
+      },
+      {
+        text: 'Pull the lever slowly?',
+        nextText: 8
+      }
+    ]
+  },
+  //death
+  {
+    id: 6,
+    text: 'You ignore the spirit as if it wasn’t there. You seemed to have infuriated the spirit. Within a blink of an eye, you found yourself passing out never to be woken again.',
     options: [
       {
         text: 'Restart?',
@@ -93,8 +123,8 @@ const textNodes = [
     ]
   },
   {
-    id: 5,
-    text: 
+    id: 7,
+    text:''
   }
 ]
 startGame()
