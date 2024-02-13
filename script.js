@@ -122,9 +122,27 @@ const textNodes = [
       }
     ]
   },
+  //story
   {
     id: 7,
-    text:''
+    text:'You yank the lever down and the doors start to open creating a huge echo throughout the temple. You walk through relieved at the sight of your environment. You wave to the spirit as you walk out of the temple, finally enjoying the freedom that you have – only to black out and wake up to your bedroom. Guess it was all a dream :)',
+    options: [
+      {
+        text: "The End",
+        nextText: -1
+      }
+    ]
+  },
+  //death
+  {
+    id: 8,
+    text: 'You gently pull the lever at a slow pace, though nothing seems to be happening. When you finally finished pulling the lever, the spirit spoke. \“Oh! I forgot if you pull the lever once and fail, the doors will permanently stay locked. I guess you’re stuck with me MUAHAHAHHAHAHA.\”',
+    options: [
+      {
+        text: 'Restart?',
+        nextText: -1
+      }
+    ]
   }
 ]
 startGame()
