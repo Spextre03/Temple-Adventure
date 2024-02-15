@@ -2,19 +2,20 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
-
+//starts game sets state as an empty object
 function startGame() {
   state = {}
   showTextNode(1)
 }
 
+//Displays the text for a specific node and creates buttons for available options
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
-
+//traverses each object in the "option" array and creates a button for each option
   textNode.options.forEach(option => {
     if (showOption(option)) {
       const button = document.createElement('button')
@@ -26,19 +27,21 @@ function showTextNode(textNodeIndex) {
   })
 }
 
+//Checks if the option should be shown based on the current game state
 function showOption(option) {
   return option.requiredState == null || option.requiredState(state)
 }
 
+//continues to next piece of text based on what option is selected
 function selectOption(option) {
-  const nextTextNodeId = option.nextText
+  const nextTextNodeId = option.nextText 
   if (nextTextNodeId <= 0) {
     return startGame()
   }
-  state = Object.assign(state, option.setState)
+  state = Object.assign(state, option.setState) //sets state to the new state
   showTextNode(nextTextNodeId)
 }
-
+//array of objects that contain the text for each node and the options available to the player
 const textNodes = [
   {
     id: 1,
@@ -99,7 +102,7 @@ const textNodes = [
   //story
   {
     id: 5,
-    text: '\“Yay!! Come on, follow me!\” You follow the spirit down the long, still silent, ominous hallway until you reach a lever huddled right next to a enormous pair of doors. \“You have to pull this lever at a certain speed – although I forgot whether it was fast or slow…\” ',
+    text: '\“Come on, follow me!\” You follow the spirit down the long, still silent, ominous hallway until you reach a lever huddled right next to a enormous pair of doors. \“You have to pull this lever at a certain speed – although I forgot whether it was fast or slow…\” ',
     options: [
       {
         text: 'Pull the lever fast?',
